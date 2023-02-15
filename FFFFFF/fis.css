@@ -1,0 +1,15 @@
+#A4{
+    height: 350px;
+    width: 248px;
+    display: inline-block;
+    background-color: rgb(224, 106, 106);
+    position: absolute;
+    top: 30%;
+    left: 45%;
+}
+
+#bild1{
+    position: absolute;
+    max-width: 50%;
+
+}
