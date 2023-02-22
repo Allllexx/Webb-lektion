@@ -6,10 +6,49 @@
     position: absolute;
     top: 30%;
     left: 45%;
+    
 }
 
 #bild1{
     position: absolute;
-    max-width: 50%;
+    top: 30%;
+    left: 45%;
+    filter: blur(100); 
+}
 
+.blurry {
+    filter: blur(5px); 
+  }
+
+#bild2{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+}
+
+#button{
+    background-color: rgb(252, 31, 31);
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    top: 70%;
+    left: 45%;
+}
+
+#button2{
+    background-color: rgb(44, 226, 59);
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    top: 80%;
+    left: 45%;
+}
+
+#button3{
+    background-color: rgb(144, 40, 255);
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    top: 90%;
+    left: 45%;
 }
