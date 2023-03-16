@@ -1,26 +1,23 @@
-function blurImage() {
-  var img = document.getElementById("bild1");
-  img.classList.toggle("blurry"); 
+const imageInput = document.getElementById('image-input');
+const imageUploadBtn = document.getElementById('image-upload-btn');
+const imagePreview = document.getElementById('image-preview');
 
-}
+imageUploadBtn.addEventListener('click', function() {
+  imageInput.click();
+});
 
-function resizeBild() {
-  var img = document.getElementById("A4");
-  var currentWidth = img.offsetWidth;
-  var currentHeight = img.offsetHeight;
-  var newWidth = 350
-  var newHeight = 248
-  img.style.width = newWidth + "px";
-  img.style.height = newHeight + "px";
-}
-
-
-function resizePic() {
-  var img = document.getElementById("A4");
-  var currentWidth = img.offsetWidth;
-  var currentHeight = img.offsetHeight;
-  var newWidth = 248
-  var newHeight =  350
-  img.style.width = newWidth + "px";
-  img.style.height = newHeight + "px";
-}
+imageInput.addEventListener('change', function() {
+  const file = imageInput.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.addEventListener('load', function() {
+      const image = new Image();
+      image.src = reader.result;
+      image.onload = function() {
+        imagePreview.innerHTML = '';
+        imagePreview.appendChild(image);
+      }
+    });
+    reader.readAsDataURL(file);
+  }
+});
