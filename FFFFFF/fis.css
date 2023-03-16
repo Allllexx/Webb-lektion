@@ -1,54 +1,80 @@
-#A4{
-    height: 350px;
-    width: 248px;
-    display: inline-block;
-    background-color: rgb(224, 106, 106);
-    position: absolute;
-    top: 30%;
-    left: 45%;
-    
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-#bild1{
-    position: absolute;
-    top: 30%;
-    left: 45%;
-    filter: blur(100); 
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.blurry {
-    filter: blur(5px); 
-  }
-
-#bild2{
-    position: absolute;
-    top: 50%;
-    left: 45%;
+header {
+  text-align: center;
 }
 
-#button{
-    background-color: rgb(252, 31, 31);
-    width: 120px;
-    height: 30px;
-    position: absolute;
-    top: 70%;
-    left: 45%;
+h1 {
+  font-size: 3em;
+  margin-bottom: 0;
 }
 
-#button2{
-    background-color: rgb(44, 226, 59);
-    width: 120px;
-    height: 30px;
-    position: absolute;
-    top: 80%;
-    left: 45%;
+h2 {
+  font-size: 1.5em;
+  margin-top: 0;
 }
 
-#button3{
-    background-color: rgb(144, 40, 255);
-    width: 120px;
-    height: 30px;
-    position: absolute;
-    top: 90%;
-    left: 45%;
+h3 {
+  font-size: 1.2em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+li strong {
+  display: inline-block;
+  width: 100px;
+}
+
+section:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+#image-preview {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#image-preview img {
+  max-width: 100%;
+  max-height: 300px;
+}
+
+form {
+  text-align: center;
+  margin-bottom: 20px;
 }
