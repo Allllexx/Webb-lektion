@@ -1,65 +1,41 @@
 <!DOCTYPE html>
-<html lang="Sv">
-  <head>
-    <title>CV</title>
-    <link rel="stylesheet" href="Styles.css">
-  </head>
-  <body>
-    <form>
-      <input type="file" id="image-input" accept="image/*">
-      <button type="button" id="image-upload-btn">ladda upp bild
-      </button>
-    </form>
-    <div class="container">
-    <div id="image-preview"></div>
-      <header>
-        <h1>Alexander Wang</h1>
-        <h2>Programmerare</h2>
-      </header>
-      <section>
-        <h3>Egen Information</h3>
-        <ul>
-          <li><strong>Namn:</strong>Alexander Wang</li>
-          <li><strong>Email:</strong> AlexanderWang@email.com</li>
-          <li><strong>Telefon:</strong> +46 123 456 789</li>
-          <li><strong>Address:</strong> Vansövägen 86, Örby , Sverige</li>
-        </ul>
-      </section>
-      <section>
-        <h3>Utbildning</h3>
-        <ul>
-          <li>
-            <strong>Kandidatexamen datavetenskap</strong><br>
-            Stockholms Universitet, Stockholm, Sverige<br>
-            2015-2019
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h3>Skickligheter</h3>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>React</li>
-          <li>Node.js</li>
-        </ul>
-      </section>
-      <section>
-        <h3>Erfarenhet</h3>
-        <ul>
-          <li>
-            <strong>Front-end-utvecklare</strong><br>
-            ABC Company, Stockholm, Sverige<br>
-            2019-nutid
-            <ul>
-              <li>Utvecklade och underhöll flera webbapplikationer med hjälp av React och Node.js</li>
-              <li>Samarbetade med designers och back-end-utvecklare för att säkerställa sömlös integration</li>
-            </ul>
-          </li>
-        </ul>
-      </section>
-    </div>
-    <script src="Javascript.js"></script>
-  </body>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="Styles.css">
+  
+</head>
+<body>
+  <h1> CV </h1>
+  
+  <div>
+    
+  <input type="file" id="imageUpload" accept="image/*">
+  <div id="circleContainer">
+    <img id="imagePreview">
+  </div>
+  <label for="filterSelect">Apply filter:</label>
+  <select id="filterSelect">
+  <option value="none">None</option>
+  <option value="grayscale">Grayscale</option>
+  <option value="sepia">Sepia</option>
+  <option value="invert">Invert</option>
+  <option value="hue-rotate">Hue Rotate</option>
+  <option value="saturate">Saturate</option>
+  <option value="brightness">Brightness</option>
+  <option value="contrast">Contrast</option>
+  </select>
+  <input type="range" min="0" max="100" value="50" class="slider" id="filter-range">
+    
+  
+  
+  
+ 
+  
+  </div>
+  <script src="Javascript.js"></script>
+</body>
 </html>
