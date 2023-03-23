@@ -1,23 +1,32 @@
-const imageInput = document.getElementById('image-input');
-const imageUploadBtn = document.getElementById('image-upload-btn');
-const imagePreview = document.getElementById('image-preview');
+const filterSelect = document.querySelector('#filterSelect');
+const filterRange = document.querySelector('#filter-range');
+const image = document.querySelector('#imagePreview');
 
-imageUploadBtn.addEventListener('click', function() {
-  imageInput.click();
-});
+function applyFilter() {
+  const filter = filterSelect.value;
+  const intensity = filterRange.value;
+  image.style.filter = `${filter}(${intensity}%)`;
+}
 
-imageInput.addEventListener('change', function() {
-  const file = imageInput.files[0];
+filterSelect.addEventListener('change', applyFilter);
+filterRange.addEventListener('input', applyFilter);
+
+
+const imageUpload = document.querySelector('#imageUpload');
+const circleContainer = document.querySelector('#circleContainer');
+const imagePreview = document.querySelector('#imagePreview');
+
+imageUpload.addEventListener('change', function() {
+  const file = this.files[0];
   if (file) {
     const reader = new FileReader();
-    reader.addEventListener('load', function() {
-      const image = new Image();
-      image.src = reader.result;
-      image.onload = function() {
-        imagePreview.innerHTML = '';
-        imagePreview.appendChild(image);
-      }
-    });
+    reader.onload = function() {
+      imagePreview.src = reader.result;
+      circleContainer.style.display = "block";
+    }
     reader.readAsDataURL(file);
+  } else {
+    imagePreview.src = "";
+    circleContainer.style.display = "none";
   }
 });
