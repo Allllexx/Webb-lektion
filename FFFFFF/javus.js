@@ -30,3 +30,26 @@ imageUpload.addEventListener('change', function() {
     circleContainer.style.display = "none";
   }
 });
+
+const toggleButton = document.getElementById('mode-toggle');
+
+toggleButton.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  if (document.body.classList.contains('dark')) {
+    toggleButton.innerText = 'Switch to Light Mode';
+  } else {
+    toggleButton.innerText = 'Switch to Dark Mode';
+  }
+});
+
+const fontSwitch = document.querySelector('#fontBtn');
+const body = document.querySelector('body');
+
+fontSwitch.addEventListener('click', function() {
+  if (body.style.fontFamily === 'Cambria, serif') {
+    body.style.fontFamily = '';
+  } else {
+    body.style.fontFamily = 'Cambria, serif';
+  }
+});
+
